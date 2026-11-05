@@ -1,0 +1,14 @@
+data/raw/
+/results/*
+!/results/public_data/
+demo_output/
+config/samples.tsv
+*.fastq.gz
+*.fq.gz
+.DS_Store
+.Rhistory
+busco_downloads/
+tests/
+*.log
+busco_downloads/
+*.log

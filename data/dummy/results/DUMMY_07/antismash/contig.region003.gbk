@@ -1,0 +1,8 @@
+LOCUS       dummy_contig
+FEATURES             Location/Qualifiers
+     region          1..1000
+                     /product="terpene"
+     CDS             10..200
+                     /product="hypothetical protein"
+ORIGIN
+//

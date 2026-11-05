@@ -1,0 +1,8 @@
+# Identifier	Cytoplasmic effector	Apoplastic effector	Non-effector	Prediction
+prot_1	0.1	0.8	-	Cytoplasmic effector
+prot_2	0.1	0.8	-	Apoplastic effector
+prot_3	0.1	0.8	-	Non-effector
+prot_4	0.1	0.8	-	Cytoplasmic effector
+prot_5	0.1	0.8	-	Non-effector
+prot_6	0.1	0.8	-	Apoplastic/cytoplasmic effector
+prot_7	0.1	0.8	-	Cytoplasmic effector

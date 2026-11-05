@@ -1,0 +1,9 @@
+Gene ID	EC#	HMMER	dbCAN_sub	DIAMOND	#ofTools
+gene_GH5_7	-	GH5_7(10-200)	GH5_7_e1	GH5_7	3
+gene_GH28	-	GH28(10-200)	GH28_e1	GH28	3
+gene_AA9	-	AA9(10-200)	AA9_e1	AA9	3
+gene_CE1	-	CE1(10-200)	CE1_e1	CE1	3
+gene_GT2	-	GT2(10-200)	GT2_e1	GT2	3
+gene_PL1	-	PL1(10-200)	PL1_e1	PL1	3
+gene_single	-	CBM1(5-40)	-	-	1
+gene_none	-	-	-	-	0
