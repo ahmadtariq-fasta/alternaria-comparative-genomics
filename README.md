@@ -5,8 +5,6 @@ A pipeline for comparing fungal isolates from different host plants: assembly, g
 > [!IMPORTANT]
 > **This repo contains no real data or results.** The original project used unpublished isolate data that belongs to someone else, and everything in `data/dummy/` is simulated. The output of the demo says nothing about biology.
 
-> [!NOTE]
-> **Reconstruction.** The original scripts from this MSc course project were lost. This code was rebuilt in November 2026, with AI assistance, from the methods section of the project report. It is not the code that produced the report's results.
 
 ## Try it (needs R only)
 
