@@ -1,10 +1,28 @@
+<p align="center">
+  <img src="docs/banner.svg" alt="Alternaria comparative genomics" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash">
+  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
+  <img src="https://img.shields.io/badge/Conda-44A833?style=for-the-badge&logo=anaconda&logoColor=white" alt="Conda">
+  <img src="https://img.shields.io/badge/SLURM-HPC-0f766e?style=for-the-badge" alt="SLURM HPC">
+  <img src="https://img.shields.io/badge/data-simulated%20only-64748b?style=for-the-badge" alt="Simulated data only">
+</p>
+
 # Comparative genomics of host association in small-spored *Alternaria*
+
+<p align="center">
+  <img src="docs/pipeline.svg" alt="Pipeline overview: assemble, QC, gene prediction, functional annotation, orthology, host enrichment" width="100%">
+</p>
 
 A pipeline for comparing fungal isolates from different host plants: assembly, gene prediction, functional annotation (CAZymes, effectors, biosynthetic gene clusters), orthology, and host-enrichment statistics.
 
 > [!IMPORTANT]
 > **This repo contains no real data or results.** The original project used unpublished isolate data that belongs to someone else, and everything in `data/dummy/` is simulated. The output of the demo says nothing about biology.
 
+> [!NOTE]
+> **Reconstruction.** The original scripts from this MSc course project were lost. This code was rebuilt in November 2026, with AI assistance, from the methods section of the project report. It is not the code that produced the report's results.
 
 ## Try it (needs R only)
 

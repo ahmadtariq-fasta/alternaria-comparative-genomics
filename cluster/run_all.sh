@@ -15,7 +15,7 @@
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=128G
-#SBATCH --time=16:00:00
+#SBATCH --time=48:00:00
 #SBATCH --output=%x_%j.out
 
 set -eo pipefail
@@ -72,6 +72,7 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
   "$ENV_ROOT/quast/bin/quast.py" --version
   check_tool busco busco
   check_tool funannotate_env funannotate
+  chmod +x "$ENV_ROOT"/funannotate_env/lib/python*/site-packages/funannotate/aux_scripts/*.py
   check_tool dbcan run_dbcan dbcan_build
   check_tool antismash antismash download-antismash-databases
   check_tool orthofinder_env orthofinder
@@ -111,11 +112,11 @@ if [[ -z "${SLURM_JOB_ID:-}" ]]; then
     conda deactivate
     touch "$FUNANNOTATE_DB/.setup_done"
   fi
-  if [[ ! -f "$BUSCO_DB/.setup_done" ]]; then
+  if [[ ! -d "$BUSCO_DB/lineages/ascomycota_odb10" ]]; then
     conda activate "$ENV_ROOT/busco"
     busco --download ascomycota_odb10 --download_path "$BUSCO_DB"
     conda deactivate
-    touch "$BUSCO_DB/.setup_done"
+    [[ -d "$BUSCO_DB/lineages/ascomycota_odb10" ]] || { echo "❌ BUSCO lineage did not download to $BUSCO_DB/lineages" >&2; exit 1; }
   fi
   if [[ ! -f "$DBCAN_DB/.setup_done" ]]; then
     conda activate "$ENV_ROOT/dbcan"
