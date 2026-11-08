@@ -53,7 +53,7 @@ This simulates tool outputs for 24 made-up isolates, runs steps 08–10, and che
 4. Submit steps 1–7 in order from the repo root, for example `sbatch scripts/01_trim_assemble.sh`.
 5. Run steps 8–10 using the commands in each script's header.
 
-## Run on public genomes (CAU cluster)
+## Run on public genomes
 
 ```bash
 bash cluster/run_all.sh    # from the repo root, on a login node, inside tmux
@@ -74,10 +74,12 @@ This is a test of the pipeline, not a biological result: the two host groups als
 
 | Part | Status |
 |---|---|
-| Steps 8–10 | Run on simulated data, with checks in `tests/check_demo.R` |
-| Steps 1–7 | Script logic tested with stand-in programs only; **never run with the real tools** |
-| `cluster/run_all.sh` | Written for the CAU cluster; not yet run there |
-| Parsers in step 8 | Written from the documented output formats and not yet tried on real tool output, so check them against your tool versions |
+| Steps 1–3, 6, 7 | Run on the cluster on the 12 public ENA genomes in `cluster/public_samples.tsv`.  |
+| Step 4 (eggNOG-mapper, InterProScan) | Left out of the cluster run|
+| Step 5 (SignalP, EffectorP) | Effector output stays empty unless you install SignalP yourself, it needs a licence |
+| Steps 8–10 | Run on simulated data, with checks in `tests/check_demo.R`, and on the output of the cluster run |
+| Parsers in step 8 | Now tried on real dbCAN, antiSMASH and OrthoFinder output from that run |
+| `cluster/run_all.sh` | Run on the cluster.  |
 
 ## Differences from the report
 
